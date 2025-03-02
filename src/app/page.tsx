@@ -3,6 +3,7 @@ import { ButtonGroup } from "@/components/ButtonGroup"
 import { TabGroup } from "@/components/TabGroup"
 import { ProjectSection } from "@/components/ProjectSection"
 import { SkillSection } from "@/components/SkillSection"
+import { Navbar } from "@/components/Navbar"
 
 export default function Home() {
 
@@ -88,21 +89,26 @@ export default function Home() {
   ]
 
   return (
-    <main className="container mx-auto max-w-screen-md px-4 py-8">
-      <div className="flex justify-between items-center mb-8">
-        <Header {...personalInfo} />
-      </div>
-      <div className="flex justify-center items-center">
-        <ButtonGroup {...links} />
-      </div>
-      <TabGroup workExperiences={workExperiences} educationExperiences={educationExperiences} />
-      <div className="mt-8">
-        <SkillSection skills={skills} />
-      </div>
-      <div className="mt-8">
-        <ProjectSection projects={projects} />
-      </div>
-    </main>
+    <>
+      <Navbar />
+      <main className="container mx-auto max-w-screen-md px-4 py-8">
+        <div id="about" className="flex justify-between items-center mb-8">
+          <Header {...personalInfo} />
+        </div>
+        <div className="flex justify-center items-center">
+          <ButtonGroup {...links} />
+        </div>
+        <div id="experience" className="mt-8">
+          <TabGroup workExperiences={workExperiences} educationExperiences={educationExperiences} />
+        </div>
+        <div id="skills" className="mt-8">
+          <SkillSection skills={skills} />
+        </div>
+        <div id="projects" className="mt-8">
+          <ProjectSection projects={projects} />
+        </div>
+      </main>
+    </>
   )
 }
 
