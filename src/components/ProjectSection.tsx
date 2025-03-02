@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Github, Link } from "lucide-react"
+import Image from "next/image"
 
 interface Project {
   title: string
@@ -7,6 +8,7 @@ interface Project {
   technologies: string[]
   repoUrl: string
   liveUrl: string
+  preview: string
 }
 
 interface ProjectSectionProps {
@@ -19,7 +21,7 @@ export function ProjectSection({ projects }: ProjectSectionProps) {
       <h2 className="text-2xl font-bold">Projects</h2>
       <div className="grid gap-4">
         {projects.map((project, index) => (
-          <div key={index} className="border rounded-lg p-4">
+          <div key={index} className="border rounded-lg p-4 flex flex-col space-y-4">
             <div className="flex justify-between items-start">
               <h3 className="text-xl font-semibold">{project.title}</h3>
               <div className="flex space-x-2">
@@ -36,6 +38,7 @@ export function ProjectSection({ projects }: ProjectSectionProps) {
               </div>
             </div>
             <p className="text-muted-foreground mt-2">{project.description}</p>
+            <Image src={project.preview} alt="preview" width={600} height={400} className="rounded-md"/>
             <div className="flex flex-wrap gap-2 mt-4">
               {project.technologies.map((tech) => (
                 <span key={tech} className="bg-secondary text-secondary-foreground px-2 py-1 rounded-md text-sm">

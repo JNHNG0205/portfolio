@@ -2,6 +2,7 @@ import { Header } from "@/components/Header"
 import { ButtonGroup } from "@/components/ButtonGroup"
 import { TabGroup } from "@/components/TabGroup"
 import { ProjectSection } from "@/components/ProjectSection"
+import { SkillSection } from "@/components/SkillSection"
 
 export default function Home() {
 
@@ -54,22 +55,36 @@ export default function Home() {
       description: "Developed a decentralized data marketplace with bidding system",
       technologies: ["Next.js", "Solidity", "Zero-Knowledge Proof","IPFS"],
       repoUrl: "https://github.com/JNHNG0205/encode-hackathon",
-      liveUrl: "https://encode-hackathon-ten.vercel.app/"
+      liveUrl: "https://encode-hackathon-ten.vercel.app/",
+      preview: "/dataauc.webp"
     },
     {
       title: "MAP Mak Mak",
       description: "Created a decentralized location-based bounty system with real-time updates.",
       technologies: ["Next.js", "Solidity", "Thirdweb"],
       repoUrl: "https://github.com/0xBenjamintan/ethbangkok_m1c4",
-      liveUrl: "https://mapmakmak.vercel.app/"
+      liveUrl: "https://mapmakmak.vercel.app/",
+      preview: "/mapmakmak.webp"
     },
     {
       title: "AIquidity",
       description: "Designed and developed an AI agent which can manage portfolio and execute smart contract transactions across liquidity pools ",
       technologies: ["Next.js", "Solidity", "AgentKit"],
       repoUrl: "https://github.com/noobstar3310/ethglobal-agentic",
-      liveUrl: "https://ethglobal-agentic.vercel.app/"
+      liveUrl: "https://ethglobal-agentic.vercel.app/",
+      preview: "/aiquidity.webp"
     },
+  ]
+
+  const skills = [
+    { name: "JavaScript", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" },
+    { name: "TypeScript", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"  },
+    { name: "React", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"},
+    { name: "Next.js", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" },
+    { name: "Solidity", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg" },
+    { name: "HTML", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" },
+    { name: "CSS", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" },
+    { name: "Tailwind CSS", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" }
   ]
 
   return (
@@ -81,6 +96,9 @@ export default function Home() {
         <ButtonGroup {...links} />
       </div>
       <TabGroup workExperiences={workExperiences} educationExperiences={educationExperiences} />
+      <div className="mt-8">
+        <SkillSection skills={skills} />
+      </div>
       <div className="mt-8">
         <ProjectSection projects={projects} />
       </div>
