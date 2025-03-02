@@ -85,7 +85,8 @@ export default function Home() {
     { name: "Solidity", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg" },
     { name: "HTML", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" },
     { name: "CSS", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" },
-    { name: "Tailwind CSS", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" }
+    { name: "Tailwind CSS", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
+    { name: "MySQL", logo: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" }
   ]
 
   return (
