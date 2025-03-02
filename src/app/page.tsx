@@ -53,16 +53,22 @@ export default function Home() {
       title: "Data.Auc",
       description: "Developed a decentralized data marketplace with bidding system",
       technologies: ["Next.js", "Solidity", "Zero-Knowledge Proof","IPFS"],
+      repoUrl: "https://github.com/JNHNG0205/encode-hackathon",
+      liveUrl: "https://encode-hackathon-ten.vercel.app/"
     },
     {
       title: "MAP Mak Mak",
       description: "Created a decentralized location-based bounty system with real-time updates.",
       technologies: ["Next.js", "Solidity", "Thirdweb"],
+      repoUrl: "https://github.com/0xBenjamintan/ethbangkok_m1c4",
+      liveUrl: "https://mapmakmak.vercel.app/"
     },
     {
-      title: "SocialPro",
-      description: "Designed and developed an AI powered social media posting platform for content generation and post scheduling",
-      technologies: ["App Script", "Google Excel"],
+      title: "AIquidity",
+      description: "Designed and developed an AI agent which can manage portfolio and execute smart contract transactions across liquidity pools ",
+      technologies: ["Next.js", "Solidity", "AgentKit"],
+      repoUrl: "https://github.com/noobstar3310/ethglobal-agentic",
+      liveUrl: "https://ethglobal-agentic.vercel.app/"
     },
   ]
 
