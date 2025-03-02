@@ -9,7 +9,7 @@ interface ButtonGroupProps {
   linkedinUrl: string
 }
 
-export function ButtonGroup({ resumeUrl, githubUrl, email, linkedinUrl }: ButtonGroupProps) {
+export function ButtonGroup({ resumeUrl, githubUrl, linkedinUrl }: ButtonGroupProps) {
   return (
     <div className="flex flex-wrap gap-4 my-6">
       <Button asChild>
@@ -23,7 +23,7 @@ export function ButtonGroup({ resumeUrl, githubUrl, email, linkedinUrl }: Button
         </a>
       </Button>
       <Button asChild variant="outline" size="icon">
-        <a href={`mailto:${email}`} aria-label="Email">
+        <a href= "mailto:junhengteh.123@gmail.com" aria-label="Email">
           <Mail className="h-4 w-4" />
         </a>
       </Button>

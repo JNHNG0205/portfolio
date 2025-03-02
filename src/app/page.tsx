@@ -15,9 +15,9 @@ export default function Home() {
 
   const links = {
     resumeUrl: "/resume.pdf",
-    githubUrl: "https://github.com/johndoe",
+    githubUrl: "https://github.com/JNHNG0205",
     email: "junhengteh.123@gmail.com",
-    linkedinUrl: "https://www.linkedin.com/in/johndoe",
+    linkedinUrl: "https://www.linkedin.com/in/teh-jun-heng-6773202b0/",
   }
 
   const workExperiences = [
@@ -25,12 +25,19 @@ export default function Home() {
       title: "Software Developent Intern & Teaching Assistant",
       organization: "Sigma School",
       period: "Oct 2024 - Jan 2025",
-      description: "Worked as a frontend devolper for Jobier, an AI powered job application website.",
+      description: "Worked as a frontend developer for Jobier, an AI powered job application website.",
       companyLogo:"/sigmaschool.webp"
     },
   ]
 
   const educationExperiences = [
+    {
+      title: "Bachelor of Science (Hons) in Software Engineering",
+      organization: "Asia Pacific University of Technology & Innovation",
+      period: " March 2025 - Present",
+      description: "Focused on basic web technologies and software engineering.",
+      companyLogo: "/apu.webp"
+    },
     {
       title: "Diploma in Information & Communication Technology specialism in Interactive Technology",
       organization: "Asia Pacific University of Technology & Innovation",
@@ -44,13 +51,13 @@ export default function Home() {
   const projects = [
     {
       title: "Data.Auc",
-      description: "Developed a full-stack e-commerce platform with React and Node.js.",
-      technologies: ["React", "Node.js", "MongoDB"],
+      description: "Developed a decentralized data marketplace with bidding system",
+      technologies: ["Next.js", "Solidity", "Zero-Knowledge Proof","IPFS"],
     },
     {
       title: "MAP Mak Mak",
-      description: "Created a task management application with real-time updates.",
-      technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+      description: "Created a decentralized location-based bounty system with real-time updates.",
+      technologies: ["Next.js", "Solidity", "Thirdweb"],
     },
     {
       title: "SocialPro",

@@ -21,7 +21,7 @@ export function Header({ name, country, age }: HeaderProps) {
       </CardHeader>
       <CardContent className="flex flex-col space-y-2 justify-center items-center">
         <p className="text-3xl">{name} </p>
-        <p>Hi, I like cats.</p>
+        <p>Software Engineer</p>
         <p className="text-xl text-muted-foreground">
           {country} • {age} years old
         </p>
