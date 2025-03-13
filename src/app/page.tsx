@@ -1,19 +1,32 @@
+'use client';
+
 import { Header } from "@/components/Header"
 import { ButtonGroup } from "@/components/ButtonGroup"
 import { TabGroup } from "@/components/TabGroup"
 import { ProjectSection } from "@/components/ProjectSection"
 import { SkillSection } from "@/components/SkillSection"
 import { Navbar } from "@/components/Navbar"
+import { Chatbot } from "@/components/Chatbot"
+import { useState, useEffect } from 'react'
 
 export default function Home() {
 
   const TEH_BIRTH_YEAR = 2004
 
-  const personalInfo = {
+  // Use static data for initial server render
+  const [personalInfo, setPersonalInfo] = useState({
     name: "Teh Jun Heng",
     country: "Malaysia",
-    age: new Date().getFullYear() - TEH_BIRTH_YEAR,
-  }
+    age: new Date().getFullYear() - TEH_BIRTH_YEAR
+  });
+  
+  // Update age on client-side to avoid hydration mismatch
+  useEffect(() => {
+    setPersonalInfo(prev => ({
+      ...prev,
+      age: new Date().getFullYear() - TEH_BIRTH_YEAR
+    }));
+  }, []);
 
   const links = {
     resumeUrl: "/resume.pdf",
@@ -109,6 +122,7 @@ export default function Home() {
           <ProjectSection projects={projects} />
         </div>
       </main>
+      <Chatbot personalInfo={personalInfo} />
     </>
   )
 }
