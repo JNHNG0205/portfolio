@@ -65,20 +65,20 @@ export default function Home() {
 
   const projects = [
     {
+      title: "ENSPin",
+      description: "Developed a backend service with dashboard that automatically pins IPFS files linked to ENS names, ensuring they stay online and accessible.",
+      technologies: ["React", "TypeScript", "Docker","IPFS"],
+      repoUrl: "https://github.com/ens-pin",
+      liveUrl: "",
+      preview: "/enspin.webp"
+    },
+    {
       title: "Data.Auc",
       description: "Developed a decentralized data marketplace with bidding system",
       technologies: ["Next.js", "Solidity", "Zero-Knowledge Proof","IPFS"],
       repoUrl: "https://github.com/JNHNG0205/encode-hackathon",
       liveUrl: "https://encode-hackathon-ten.vercel.app/",
       preview: "/dataauc.webp"
-    },
-    {
-      title: "MAP Mak Mak",
-      description: "Created a decentralized location-based bounty system with real-time updates.",
-      technologies: ["Next.js", "Solidity", "Thirdweb"],
-      repoUrl: "https://github.com/0xBenjamintan/ethbangkok_m1c4",
-      liveUrl: "https://mapmakmak.vercel.app/",
-      preview: "/mapmakmak.webp"
     },
     {
       title: "AIquidity",
