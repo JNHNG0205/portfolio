@@ -6,7 +6,7 @@ interface Experience {
   title: string
   organization: string
   period: string
-  description: string
+  description: string | string[]
   companyLogo?: string
   universityLogo?: string
 }
@@ -67,7 +67,15 @@ function ExperienceCard({ title, organization, period, description, companyLogo,
         <CardDescription>
           {organization} • {period}
         </CardDescription>
-        <p className="text-sm">•&nbsp;{description}</p>
+        {Array.isArray(description) ? (
+          <ul className="list-disc pl-4 space-y-1">
+            {description.map((item, index) => (
+              <li key={index} className="text-sm">{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-sm">•&nbsp;{description}</p>
+        )}
       </CardContent>
     </Card>
   )

@@ -40,7 +40,12 @@ export default function Home() {
       title: "Software Developent Intern & Teaching Assistant",
       organization: "Sigma School",
       period: "Oct 2024 - Jan 2025",
-      description: "Worked as a frontend developer for Jobier, an AI powered job application website.",
+      description: [
+        "Spearheaded frontend development for Jobier, an AI-driven job application automation platform, enhancing job-seeker efficiency with intelligent auto-fill and submission tools.",
+        "Built a fully responsive user interface using React, Tailwind CSS, and TypeScript, resulting in a 30% improvement in user engagement and mobile usability.",
+        "Facilitated live and online coding support for over 50+ students in the Full Stack Developer Bootcamp, addressing real-time debugging, project guidance, and code reviews.",
+        "Authored comprehensive technical documentation for internal workflows, improving onboarding time for new team members by 40%."
+      ],
       companyLogo:"/sigmaschool.webp"
     },
   ]
@@ -49,15 +54,24 @@ export default function Home() {
     {
       title: "Bachelor of Science (Hons) in Software Engineering",
       organization: "Asia Pacific University of Technology & Innovation",
-      period: " March 2025 - Present",
-      description: "Focused on basic web technologies and software engineering.",
+      period: "March 2025 - Present",
+      description: [
+        "Focusing on advanced software engineering principles, system architecture, and emerging technologies",
+        "Studying core subjects including Software Design Patterns, Cloud Computing, and AI/ML integration",
+        "Participating in industry projects and hackathons to gain practical experience"
+      ],
       companyLogo: "/apu.webp"
     },
     {
       title: "Diploma in Information & Communication Technology specialism in Interactive Technology",
       organization: "Asia Pacific University of Technology & Innovation",
-      period: " Sep 2022 - Feb 2025",
-      description: "Focused on basic web technologies and software engineering.",
+      period: "Sep 2022 - Feb 2025",
+      description: [
+        "Achieved a CGPA of 3.77, demonstrating strong academic performance",
+        "Specialized in web development, mobile app development, and user interface design",
+        "Completed capstone project developing a full-stack web application using modern technologies",
+        "Active member of the university's tech club, participating in coding competitions and workshops"
+      ],
       companyLogo: "/apu.webp"
     },
    
