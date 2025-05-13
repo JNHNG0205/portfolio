@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   const links = {
-    resumeUrl: "/resume.pdf",
+    resumeUrl: "/Resume_Teh Jun Heng.pdf",
     githubUrl: "https://github.com/JNHNG0205",
     email: "junhengteh.123@gmail.com",
     linkedinUrl: "https://www.linkedin.com/in/teh-jun-heng-6773202b0/",
