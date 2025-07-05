@@ -32,7 +32,7 @@ export default function Home() {
     resumeUrl: "/Resume_Teh Jun Heng.pdf",
     githubUrl: "https://github.com/JNHNG0205",
     email: "junhengteh.123@gmail.com",
-    linkedinUrl: "https://www.linkedin.com/in/teh-jun-heng-6773202b0/",
+    linkedinUrl: "https://www.linkedin.com/in/jun-heng-teh-6773202b0/",
   }
 
   const workExperiences = [
