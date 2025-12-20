@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button"
 import { Download, Github, Mail, Linkedin } from "lucide-react"
-import { ThemeToggle } from "./ThemeToggle"
 
 interface ButtonGroupProps {
   resumeUrl: string
