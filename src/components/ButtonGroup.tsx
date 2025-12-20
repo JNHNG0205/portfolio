@@ -32,7 +32,6 @@ export function ButtonGroup({ resumeUrl, githubUrl, linkedinUrl }: ButtonGroupPr
           <Linkedin className="h-4 w-4" />
         </a>
       </Button>
-      <ThemeToggle />
     </div>
   )
 }
