@@ -1,32 +1,55 @@
 import Image from "next/image"
+import { SectionHeading } from "./SectionHeading"
 
 interface Skill {
   name: string
-  logo: string
+  logo?: string
 }
 
-interface SkillSectionProps {
+interface SkillGroup {
+  label: string
   skills: Skill[]
 }
 
-export function SkillSection({ skills }: SkillSectionProps) {
+interface SkillSectionProps {
+  groups: SkillGroup[]
+}
+
+export function SkillSection({ groups }: SkillSectionProps) {
   return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold">Skills</h2>
-      <div className="flex flex-wrap gap-3">
-        {skills.map((skill, index) => (
-          <div 
-            key={index} 
-            className="flex items-center space-x-2 bg-secondary rounded-md px-3 py-2"
-          >
-            <Image 
-              src={skill.logo} 
-              alt={`${skill.name} logo`} 
-              width={24} 
-              height={24} 
-              className="rounded-sm"
-            />
-            <span>{skill.name}</span>
+    <div>
+      <SectionHeading>Skills</SectionHeading>
+      <div className="space-y-7">
+        {groups.map((group) => (
+          <div key={group.label}>
+            <h3 className="type-title mb-3">{group.label}</h3>
+            <ul className="flex flex-wrap gap-2.5">
+              {group.skills.map((skill) => (
+                <li
+                  key={skill.name}
+                  className="flex items-center gap-2 rounded-md border border-border bg-secondary/60 py-2 pl-2 pr-3 transition-colors hover:border-teal"
+                >
+                  {skill.logo ? (
+                    <span className="flex h-6 w-6 items-center justify-center rounded bg-white p-1">
+                      <Image
+                        src={skill.logo}
+                        alt=""
+                        width={16}
+                        height={16}
+                        className="h-full w-full object-contain"
+                        unoptimized
+                      />
+                    </span>
+                  ) : (
+                    <span
+                      className="ml-1 h-1.5 w-1.5 rounded-full bg-teal"
+                      aria-hidden="true"
+                    />
+                  )}
+                  <span className="type-meta">{skill.name}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>

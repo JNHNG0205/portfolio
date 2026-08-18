@@ -4,65 +4,91 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* The Instrument — light. Pure paper, graphite ink, one teal signal. */
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.2 0.01 220);
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.2 0.01 220);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.2 0.01 220);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Instrument teal — button fills carry white text; tuned for AA. */
+    --primary: oklch(0.52 0.13 198);
+    --primary-foreground: oklch(1 0 0);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: oklch(0.975 0.004 200);
+    --secondary-foreground: oklch(0.2 0.01 220);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: oklch(0.975 0.004 200);
+    --muted-foreground: oklch(0.46 0.015 215);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: oklch(0.965 0.006 200);
+    --accent-foreground: oklch(0.2 0.01 220);
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: oklch(0.58 0.2 25);
+    --destructive-foreground: oklch(1 0 0);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: oklch(0.9 0.005 200);
+    --input: oklch(0.9 0.005 200);
+    --ring: oklch(0.52 0.13 198);
 
-    --radius: 0.5rem;
+    /* Signal tokens (not part of shadcn's set) */
+    --teal: oklch(0.52 0.13 198);
+    --teal-deep: oklch(0.47 0.12 200); /* text-safe teal on paper */
+    --teal-bright: oklch(0.7 0.14 191); /* decorative / dark-mode accent */
+    --link: oklch(0.47 0.12 200);
+
+    --radius: 0.375rem;
+
+    /* Type ramp — 5 steps, every gap >= 1.26x so the hierarchy reads at a glance.
+       Fluid only where the type is large enough for viewport width to matter. */
+    --text-display: clamp(2.25rem, 8vw, 4rem);
+    --text-headline: clamp(1.75rem, 3.2vw, 2.25rem);
+    --text-title: 1.375rem;
+    --text-body: 1.0625rem;
+    --text-label: 0.8125rem;
+
+    /* Width axis (Archivo wdth). Display widens; reading copy stays normal. */
+    --width-display: 112%;
+    --width-headline: 107%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* The Instrument — dark. Carbon canvas, off-white ink, bright teal signal. */
+    --background: oklch(0.17 0.008 220);
+    --foreground: oklch(0.96 0.005 200);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: oklch(0.17 0.008 220);
+    --card-foreground: oklch(0.96 0.005 200);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: oklch(0.21 0.01 220);
+    --popover-foreground: oklch(0.96 0.005 200);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: oklch(0.72 0.13 190);
+    --primary-foreground: oklch(0.17 0.008 220);
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: oklch(0.21 0.01 220);
+    --secondary-foreground: oklch(0.96 0.005 200);
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: oklch(0.21 0.01 220);
+    --muted-foreground: oklch(0.68 0.01 215);
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: oklch(0.24 0.012 210);
+    --accent-foreground: oklch(0.96 0.005 200);
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: oklch(0.55 0.19 25);
+    --destructive-foreground: oklch(0.96 0.005 200);
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: oklch(0.3 0.01 220);
+    --input: oklch(0.3 0.01 220);
+    --ring: oklch(0.72 0.13 190);
+
+    --teal: oklch(0.72 0.13 190);
+    --teal-deep: oklch(0.72 0.13 190);
+    --teal-bright: oklch(0.78 0.13 188);
+    --link: oklch(0.75 0.13 189);
   }
 }
 
@@ -72,6 +98,115 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-size: var(--text-body);
+    font-kerning: normal;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--teal);
+    color: var(--primary-foreground);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
   }
 }
 
+@layer components {
+  /* Six roles, one per job. Nothing on the page sets a raw font size. */
+
+  .type-display {
+    font-size: var(--text-display);
+    font-weight: 700;
+    font-stretch: var(--width-display);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+
+  .type-headline {
+    font-size: var(--text-headline);
+    font-weight: 700;
+    font-stretch: var(--width-headline);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  .type-title {
+    font-size: var(--text-title);
+    font-weight: 600;
+    line-height: 1.28;
+    letter-spacing: -0.015em;
+  }
+
+  .type-body {
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: 1.62;
+  }
+
+  /* Small sans: navigation, controls, chips — anything that is UI, not data. */
+  .type-meta {
+    font-size: var(--text-label);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.005em;
+  }
+
+  /* Controls that carry weight: the primary CTA and its siblings. */
+  .type-action {
+    font-size: var(--text-body);
+    font-weight: 500;
+    letter-spacing: -0.005em;
+  }
+
+  /* Small mono: technical facts only — stack tags and dated metadata. */
+  .type-label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: var(--text-label);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.005em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Light type on dark reads lighter: give it leading and tracking back. */
+  .dark .type-body {
+    line-height: 1.68;
+    letter-spacing: 0.006em;
+  }
+  .dark .type-meta,
+  .dark .type-label {
+    letter-spacing: 0.015em;
+  }
+}
+
+@layer utilities {
+  .text-teal {
+    color: var(--teal);
+  }
+  .text-link {
+    color: var(--link);
+  }
+  .bg-teal {
+    background-color: var(--teal);
+  }
+  .border-teal {
+    border-color: var(--teal);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

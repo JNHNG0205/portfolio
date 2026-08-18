@@ -1,5 +1,4 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import Image from 'next/image'
+import Image from "next/image"
 
 interface HeaderProps {
   name: string
@@ -9,24 +8,33 @@ interface HeaderProps {
 
 export function Header({ name, country, age }: HeaderProps) {
   return (
-    <Card className="w-full">
-      <CardHeader className="flex items-center">
-        <Image 
-          src="/profilepic.webp" 
-          alt="Header Image" 
-          width={128} 
-          height={128}
-          className="rounded-md order-2"
-        />
-      </CardHeader>
-      <CardContent className="flex flex-col space-y-2 justify-center items-center">
-        <p className="text-3xl">{name} </p>
-        <p>Software Engineer</p>
-        <p className="text-xl text-muted-foreground">
-          {country} • {age} years old
-        </p>
-      </CardContent>
-    </Card>
+    <header className="w-full">
+      <div className="flex flex-col-reverse gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
+        <div className="flex-1">
+          <h1 className="type-display whitespace-nowrap">{name}</h1>
+          <p className="type-title mt-3 font-medium text-muted-foreground">
+            Full-stack engineer
+          </p>
+          <p className="type-body mt-5 max-w-prose text-muted-foreground">
+            I build across the whole stack — web, backend, web3 and AI — and
+            care about shipping things that actually work, not demos.
+          </p>
+          <p className="type-label mt-4 text-muted-foreground">
+            {country} <span className="mx-1 text-teal">/</span> {age} years old
+          </p>
+        </div>
+
+        <div className="relative shrink-0">
+          <Image
+            src="/profilepic.webp"
+            alt="Portrait of Teh Jun Heng"
+            width={140}
+            height={140}
+            priority
+            className="rounded-lg border border-border object-cover"
+          />
+        </div>
+      </div>
+    </header>
   )
 }
-
