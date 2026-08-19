@@ -27,7 +27,7 @@ export function Header({ name, country, age }: HeaderProps) {
         <div className="relative shrink-0">
           <Image
             src="/profilepic.webp"
-            alt="Portrait of Teh Jun Heng"
+            alt="Teh Jun Heng speaking on a panel at MYBW26"
             width={140}
             height={140}
             priority

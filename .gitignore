@@ -46,6 +46,12 @@ local-config/
 /PRODUCT.md
 /DESIGN.md
 /docs
+/scripts
 
 # Impeccable design tooling (config, sidecar, critique snapshots) — local
 .impeccable/
+
+# Python (resume generator)
+__pycache__/
+*.pyc
+.venv/

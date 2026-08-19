@@ -99,7 +99,7 @@ ACHIEVEMENTS = [
 ]
 
 SKILLS = [
-    ("Languages:", " JavaScript, TypeScript, Go, Python, Java, Rust, SQL"),
+    ("Languages:", " JavaScript, TypeScript, Go, Python, Java, Rust, Solidity, SQL"),
     ("Frameworks:", " React.js, Next.js, React Native, Node.js, Gin"),
     ("Developer Tools:", " Git, Linux, Docker, GitHub Actions, Kubernetes, GCP, Kafka"),
     ("Databases:", " MySQL, PostgreSQL"),

@@ -142,6 +142,7 @@ export default function Home() {
         { name: "Python", logo: devicon("python/python-original.svg") },
         { name: "Java", logo: devicon("java/java-original.svg") },
         { name: "Rust", logo: devicon("rust/rust-original.svg") },
+        { name: "Solidity", logo: devicon("solidity/solidity-original.svg") },
         { name: "SQL" },
       ],
     },
