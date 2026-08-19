@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Download, Github, Linkedin } from "lucide-react"
+import { Download, Github, Linkedin, Mail } from "lucide-react"
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -15,6 +15,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 interface ButtonGroupProps {
+  email: string
   resumeUrl: string
   githubUrl: string
   whatsappUrl: string
@@ -22,6 +23,7 @@ interface ButtonGroupProps {
 }
 
 export function ButtonGroup({
+  email,
   resumeUrl,
   githubUrl,
   whatsappUrl,
@@ -29,7 +31,7 @@ export function ButtonGroup({
 }: ButtonGroupProps) {
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <Button asChild size="lg" className="type-action">
+      <Button asChild size="lg" className="h-11 type-action">
         <a
           href={whatsappUrl}
           target="_blank"
@@ -41,7 +43,13 @@ export function ButtonGroup({
         </a>
       </Button>
 
-      <Button asChild variant="outline" size="lg" className="type-action">
+      <Button asChild variant="outline" size="lg" className="h-11 type-action">
+        <a href={`mailto:${email}`} aria-label={`Email ${email}`}>
+          <Mail className="h-4 w-4" /> Email
+        </a>
+      </Button>
+
+      <Button asChild variant="outline" size="lg" className="h-11 type-action">
         <a href={resumeUrl} download>
           <Download className="h-4 w-4" /> Resume
         </a>

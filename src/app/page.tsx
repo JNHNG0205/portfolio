@@ -30,6 +30,7 @@ export default function Home() {
   }, []);
 
   const links = {
+    email: "heng.teh0205@gmail.com",
     resumeUrl: "/Resume_Teh_Jun_Heng.pdf",
     githubUrl: "https://github.com/JNHNG0205",
     whatsappUrl: "https://wa.me/60165410252",
