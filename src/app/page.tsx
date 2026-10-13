@@ -20,7 +20,7 @@ export default function Home() {
     country: "Malaysia",
     age: new Date().getFullYear() - TEH_BIRTH_YEAR
   });
-  
+
   // Update age on client-side to avoid hydration mismatch
   useEffect(() => {
     setPersonalInfo(prev => ({
@@ -32,7 +32,7 @@ export default function Home() {
   const links = {
     email: "heng.teh0205@gmail.com",
     resumeUrl: "/Resume_Teh_Jun_Heng.pdf",
-    githubUrl: "https://github.com/JNHNG0205",
+    githubUrl: "https://github.com/tim1293",
     whatsappUrl: "https://wa.me/60165410252",
     linkedinUrl: "https://www.linkedin.com/in/jun-heng-teh-6773202b0/",
   }
@@ -95,7 +95,7 @@ export default function Home() {
       ],
       companyLogo: "/apu.webp"
     },
-   
+
   ]
 
   const projects = [
@@ -110,13 +110,13 @@ export default function Home() {
       packageUrl: "https://www.npmjs.com/package/@agentveins/core",
     },
     {
-      title: "Anchor",
+      title: "Wysiwys",
       description:
-        "A personal finance tool for Malaysian investors buying US assets, covering the layer broker apps ignore: FX and tax. Live mid-market rates, a conversion log that computes a blended average, true returns translated at your real rate rather than spot, and dividend tracking with US withholding applied.",
-      proof: "In active development",
-      technologies: ["Go", "Gin", "PostgreSQL", "React"],
-      repoUrl: "https://github.com/JNHNG0205/FX-tracker",
-      liveUrl: "",
+        "A payment firewall for Solana treasuries: what you see is what you sign. Before a Squads multisig payout executes, a Chainlink CRE workflow re-reads the stored transaction across three RPC providers, decodes it and checks destination, token, amount and sanctions screening against the treasury's policy. An on-chain Anchor guard is the only executor, so no payment skips the check.",
+      proof: "Live on Solana devnet · TOKEN2049 Origins",
+      technologies: ["TypeScript", "Rust", "Anchor", "Chainlink CRE", "Next.js"],
+      repoUrl: "https://github.com/chiwjieren/wysiwys",
+      liveUrl: "https://app.13-250-78-41.sslip.io/",
     },
     {
       title: "ENSPin",
