@@ -55,3 +55,11 @@ local-config/
 __pycache__/
 *.pyc
 .venv/
+
+# Cloudflare / OpenNext build output
+.open-next/
+.wrangler/
+.dev.vars*
+
+# Full-res source photo (>25 MiB Workers asset limit) - kept local only
+/public/MYBW-392.jpg
