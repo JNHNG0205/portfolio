@@ -113,18 +113,27 @@ export default function Home() {
       title: "Wysiwys",
       description:
         "A payment firewall for Solana treasuries: what you see is what you sign. Before a Squads multisig payout executes, a Chainlink CRE workflow re-reads the stored transaction across three RPC providers, decodes it and checks destination, token, amount and sanctions screening against the treasury's policy. An on-chain Anchor guard is the only executor, so no payment skips the check.",
-      proof: "Live on Solana devnet · TOKEN2049 Origins",
+      proof: "Chainlink Best 5, TOKEN2049 Origins Singapore",
       technologies: ["TypeScript", "Rust", "Anchor", "Chainlink CRE", "Next.js"],
       repoUrl: "https://github.com/chiwjieren/wysiwys",
       liveUrl: "https://app.13-250-78-41.sslip.io/",
     },
     {
-      title: "ENSPin",
+      title: "Petto",
       description:
-        "Keeps IPFS content behind ENS names online by watching for ContentHashChanged events and re-pinning the referenced files automatically. I built the web frontend and the control dashboard used to manage and monitor pinned content.",
-      proof: "Best ENS Infrastructure, ETHGlobal Taipei 2025",
-      technologies: ["React", "TypeScript", "IPFS", "Docker"],
-      repoUrl: "https://github.com/ens-pin",
+        "An AI Tamagotchi that pays for its own thoughts. Every reply is a private inference on NEAR AI Cloud, billed on chain from the pet's own NEAR wallet: feed it and it chats, neglect it and it goes quiet, stake NEAR for it and the yield keeps it fed. The pet lives on an ESP32-S3 desk device, with a web console to feed, dress, stake and read its receipts.",
+      proof: "Live on NEAR testnet · mypetto.xyz",
+      technologies: ["Rust", "NEAR", "Next.js", "TypeScript", "ESP32"],
+      repoUrl: "https://github.com/JNHNG0205/Petto",
+      liveUrl: "https://mypetto.xyz",
+    },
+    {
+      title: "PeerPad",
+      description:
+        "A self-hosted, end-to-end encrypted workspace for notes, docs and tasks. Teams edit together in real time while the server stores only encrypted data, so even whoever runs it can't read the pages. Edit and view permissions are enforced with signatures, and AI agents like Claude and ChatGPT can connect over MCP.",
+      proof: "Open source · self-hosted",
+      technologies: ["Next.js", "TypeScript", "Yjs", "SQLite", "MCP"],
+      repoUrl: "https://github.com/JNHNG0205/peerpad",
       liveUrl: "",
     },
   ]

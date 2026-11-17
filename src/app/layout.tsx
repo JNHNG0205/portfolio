@@ -21,6 +21,8 @@ const mono = Chivo_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tehjunheng.com"),
+  alternates: { canonical: "/" },
   title: "Teh Jun Heng — Full-Stack Engineer",
   description:
     "Teh Jun Heng — a versatile full-stack engineer who ships real products, end to end. Web, backend, web3 and AI.",

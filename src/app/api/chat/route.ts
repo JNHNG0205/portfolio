@@ -43,11 +43,12 @@ export async function POST(request: Request) {
 
       Projects:
       1. YumeProof - A Kotlin Android app with Rust (Uniffi) for secure device attestation, using Google Play Integrity, Confidential VMs, on-chain DIDs and IOTA Notarization.
-      2. ENSPin - A TypeScript/Node.js service that monitors ENS resolver contracts and continuously pins IPFS content (Docker, Next.js), reducing ENS content expiration by 70% for prototype users.
-      3. Jobier - A responsive React frontend that automated 500+ job applications via AI integration, built with a cross-functional team of 6.
+      2. Petto - An AI Tamagotchi on NEAR whose replies are private NEAR AI Cloud inferences paid on chain from the pet's own wallet (Rust contracts, Next.js console, ESP32-S3 device). Live at mypetto.xyz.
+      3. PeerPad - A self-hosted, end-to-end encrypted collaborative workspace for notes and docs (Next.js, Yjs, SQLite), with AI agent access over MCP.
+      4. Jobier - A responsive React frontend that automated 500+ job applications via AI integration, built with a cross-functional team of 6.
 
       Leadership: President of the APU Blockchain & Cryptocurrency Club (APUBCC), leading 300+ members.
-      Achievements: 1st Place at IOTA Hackathon Malaysia 2025, Best ENS Infrastructure at ETHGlobal Taipei 2025, 2nd Place (Citrea Track) at Encode University Hackathon.
+      Achievements: 1st Place at IOTA Hackathon Malaysia 2025, Best ENS Infrastructure at ETHGlobal Taipei 2025, Chainlink Best 5 at TOKEN2049 Origins Hackathon Singapore.
       
       Only answer questions related to ${personalInfo.name}'s background, skills, projects, and professional information. 
       For any questions outside this scope, politely explain that you can only provide information about ${personalInfo.name}.
